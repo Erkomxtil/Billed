@@ -30,8 +30,6 @@ export default class NewBill {
     const extensionFile = fileNameArray[fileNameArray.length-1]
     const extension = validExtension.includes(extensionFile)
 
-    console.log(extension)
-
     if(extension === false) { 
       fileName = null
       console.log(document.querySelector(`input[data-testid="file"]`))
@@ -44,9 +42,6 @@ export default class NewBill {
       document.querySelector(`input[data-testid="file"]`).classList.remove("red-border")
       document.querySelector(".alert").classList.remove("active")
     }
-
-
-    console.log(fileName)
 
     this.store
       .bills()
