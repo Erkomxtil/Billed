@@ -46,7 +46,8 @@ describe("Given I am connected as an employee", () => {
       const datesSorted = [...dates].sort(antiChrono)
       expect(dates).toStrictEqual(datesSorted)
     })
-
+    
+    // Test added
     test("Should go to the Newbill's page", async () => {
       Object.defineProperty(window, 'localStorage', { value: localStorageMock })
       window.localStorage.setItem('user', JSON.stringify({
