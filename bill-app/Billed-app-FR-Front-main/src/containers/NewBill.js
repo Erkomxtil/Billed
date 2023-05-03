@@ -32,7 +32,7 @@ export default class NewBill {
 
     if(extension === false) { 
       fileName = null
-      console.log(document.querySelector(`input[data-testid="file"]`))
+
       document.querySelector(`input[data-testid="file"]`).classList.remove("blue-border")
       document.querySelector(`input[data-testid="file"]`).classList.add("red-border")
       document.querySelector(".alert").classList.add("active")
@@ -52,7 +52,6 @@ export default class NewBill {
         }
       })
       .then(({fileUrl, key}) => {
-        console.log(fileUrl)
         this.billId = key
         this.fileUrl = fileUrl
         this.fileName = fileName

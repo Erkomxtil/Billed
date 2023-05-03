@@ -88,8 +88,6 @@ export default class {
   handleEditTicket(e, bill, bills) { 
     if (this.counter === undefined || this.id !== bill.id) this.counter = 0
     if (this.id === undefined || this.id === bill.id) this.id = bill.id
-    console.log(this.counter)
-    console.log(this.id, "//", bill.id)
     if (this.counter % 2 === 0) {
       bills.forEach(b => {
         $(`#open-bill${b.id}`).css({ background: '#0D5AE5' })
@@ -132,7 +130,7 @@ export default class {
     this.onNavigate(ROUTES_PATH['Dashboard'])
   }
 
-  handleShowTickets(e, bills, index) { console.log("ticket droite")
+  handleShowTickets(e, bills, index) { 
     if (this.counter === undefined || this.index !== index) this.counter = 0
     if (this.index === undefined || this.index !== index) this.index = index
     if (this.counter % 2 === 0) {
@@ -152,7 +150,6 @@ export default class {
     })
 
     return bills
-
   }
 
   getBillsAllUsers = () => {
